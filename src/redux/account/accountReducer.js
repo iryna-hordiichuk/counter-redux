@@ -10,7 +10,7 @@ export const accountReducer = (state = initialState, action) => {
       };
     case 'account/withdraw':
       return {
-        balance: (state.balance = action.payload),
+        balance: state.balance - action.payload,
       };
 
     default:
